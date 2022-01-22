@@ -1,4 +1,5 @@
 var citiesListArr = [];
+var numOfCities = 6;
 var apiKey = "appid=527ffaa472a4d0f2c605827e181f11a6";
 var unit= "units=imperial";
 var dailyWeatherStart = "https://api.openweathermap.org/data/2.5/weather?q=";
@@ -94,3 +95,54 @@ var loadSavedCity = function () {
         searchedCities.append(cityNameBtn);
     }
 };
+
+var saveCityName = function (searchCityName) {
+    var newcity = 0;
+    citiesListArr = JSON.parse(localStorage.getItem("weatherInfo"));
+    if(citiesListArr == null) {
+        citiesListArr = [];
+        citiesListArr.unshift(searchCityName);
+    } else {
+        for(var i = 0; i < citiesListArr.length; i++) {
+            if(searchCityName.toLowerCase() == citiesListArr[i].toLowerCase()) {
+                return newcity;
+            }
+        }
+        if(citiesListArr.length < numOfCities) {
+            citiesListArr.unshift(searchCityName);
+        } else {
+            citiesListArr.pop();
+            citiesListArr.unshift(searchCityName);
+        }
+    }
+    localStorage.setItem("weatherInfo", JSON.stringify(citiesListArr));
+    newcity = 1;
+    return newcity;
+};
+
+var createCityNameBtn = function (searchCityName) {
+    var saveCities = JSON.parse(localStorage.getItem("weatherInfo"));
+
+    if (saveCities.length == 1) {
+        var cityNameBtn = createBtn(searchCityName);
+        searchedCities.prepend(cityNameBtn);
+    } else {
+        for (var i = 1; i < saveCities.length; i++) {
+            if(searchCityName.toLowerCase() == saveCities[i].toLowerCase()) {
+                return;
+            }
+        }
+        if (searchedCities[0].childElementCount < numOfCities) {
+            var cityNameBtn = createBtn(searchCityName);
+        } else {
+            searchedCities[0].removeChild(searchedCities[0].lastChild);
+            var cityNameBtn = createBtn(searchCityName);
+        }
+        searchedCities.prepend(cityNameBtn);
+        $(":button.list-group-item-action").on("click", function () {
+            BtnClickHandler(event);
+        });
+    }
+};
+
+loadSavedCity();
