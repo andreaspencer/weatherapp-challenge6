@@ -78,3 +78,19 @@ var getForecast = function (lat, lon) {
         }
     });
 };
+
+var createBtn = function (btnText) {
+    var btn = $("<button>").text(btnText).addClass("list-group-item list-group-item-action").attr("type", "submit");
+    return btn;
+};
+
+var loadSavedCity = function () {
+    citiesListArr = JSON.parse(localStorage.getItem(weatherInfo));
+    if (citiesListArr == null) {
+        citiesListArr = [];
+    }
+    for (var i = 0; i < citiesListArr.length; i++) {
+        var cityNameBtn = createBtn(citiesListArr[i]);
+        searchedCities.append(cityNameBtn);
+    }
+};
