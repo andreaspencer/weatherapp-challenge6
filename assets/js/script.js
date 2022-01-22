@@ -146,3 +146,28 @@ var createCityNameBtn = function (searchCityName) {
 };
 
 loadSavedCity();
+
+var formSubmitHandler = function (event) {
+    event.preventDefault();
+
+    var searchCityName = $("#searchCity").val().trim();
+    var newcity = saveCityName(searchCityName);
+    getCityWeather(searchCityName);
+    if (newcity == 1) {
+        createCityNameBtn(searchCityName);
+    }
+};
+
+var BtnClickHandler = function (event) {
+    event.preventDefault();
+
+    var searchCityName = event.target.textContent.trim();
+    getCityWeather(searchCityName);
+};
+
+$("searchCityForm").on("submit", function () {
+    formSubmitHandler(event);
+});
+$(":button.list-group-item-action").on("click", function () {
+    BtnClickHandler(event);
+});
