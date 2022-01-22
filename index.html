@@ -10,6 +10,37 @@
     <title>Weather Dashboard</title>
 </head>
 <body>
+    <header class="hero">
+        <h1 class="bd-dark text-white text-center">Weather Dashboard</h1>
+    </header>
+    <main>
+        <div class="row">
+            <section class="col-12 col-lg-3 d-flex flex-column">
+                <form class="form-group" id="searchCityForm">
+                    <label for="from-check-inline col col-12">Search For City</label>
+                    <div class="form-check-inline col col-12 px-3">
+                        <input type="text" class="form-input" id="searchCity" autofocus="true" aria-describedby="searchCity"/>
+                        <button type="submit" class="btn btn-primary" id="searchCityForm">
+                            <span class="fas fa-search"></span>
+                        </button>
+                    </div>
+                </form>
+                <li class="list group col col-12 d-none d-lg-block px-3" id="searchedCityLi"></li>
+            </section>
+            <section class="col-12 mt-3 d-flex flex-column px-3" id="display-weather-info">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title d-flex align-items-center lead font-weight-bold" style="height: 100px">
+                            <span id="cityName">Name of City</span>
+                            <span class="px-3" id="currentdate">MM/DD/YY</span>
+                            <img class="weather-icon" id="weatherIconToday" src="">
+                            </img>
+                        </h2>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
     
 </body>
 </html>
