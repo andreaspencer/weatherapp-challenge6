@@ -23,6 +23,6 @@ Create a weather dashboard that displays weather through a fetch call from one c
 * created city list into their own buttons when saved
 
 #### Live URL
-
+https://andreaspencer.github.io/weatherapp-challenge6/
 
 ##### Screenshot
