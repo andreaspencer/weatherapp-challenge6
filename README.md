@@ -25,3 +25,4 @@ Create a wather dashboard that displays weather through a fetch call from one ca
 https://andreaspencer.github.io/weatherapp-challenge6/
 
 #### Screenshot
+<img width="1369" alt="Screen Shot 2022-01-24 at 6 32 39 PM" src="https://user-images.githubusercontent.com/87836575/150900186-270220a9-8660-4892-972e-4ebde5bb1c06.png">
