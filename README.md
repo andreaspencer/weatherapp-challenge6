@@ -22,5 +22,6 @@ Create a wather dashboard that displays weather through a fetch call from one ca
 * created event listeners for clicks when buttons are clikced
 
 #### Live URL
+https://andreaspencer.github.io/weatherapp-challenge6/
 
 #### Screenshot
