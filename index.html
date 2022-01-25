@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,13 +11,13 @@
 </head>
 <body>
     <header class="hero">
-        <h1 class="bd-dark text-white text-center">Weather Dashboard</h1>
+        <h1 class="bg-dark text-white text-center mb-0">Weather Dashboard</h1>
     </header>
     <main>
-        <div class="row">
-            <section class="col-12 col-lg-3 d-flex flex-column">
+        <div class="row min-vh-100 no-gutters">
+            <section class="col-12 col-lg-3 d-flex flex-column" id="search-form">
                 <form class="form-group" id="searchCityForm">
-                    <label for="from-check-inline col col-12">Search For City</label>
+                    <label for="searchCity" class="col col-12">Search For City</label>
                     <div class="form-check-inline col col-12 px-3">
                         <input type="text" class="form-input" id="searchCity" autofocus="true" aria-describedby="searchCity"/>
                         <button type="submit" class="btn btn-primary" id="searchCityForm">
@@ -60,7 +60,7 @@
                 </h2>
                 <div class="row justify-content-between">
                     <div class="col-sm-2 card-body bg-primary text-white rounded mb-3">
-                        <p class="card-title font-weight-bold" id="Date1">MM?DD?YY</p>
+                        <p class="card-title font-weight-bold" id="Date1">MM/DD/YY</p>
                         <p class="card-text" style="height: 100px">
                             <img class="weather-icon" id="weatherIconDay1" src="">
                         </img>
@@ -74,15 +74,14 @@
                         <p class="card-text">Wind:
                             <span id="windDay1"></span>
                         </p>
-                    </div>
-                    <div class="row justify-content-between">
-                        <div class="col-sm-2 card-body bg-primary text-white rounded mb-3">
-                            <p class="card-title font-weight-bold" id="Date2">MM?DD?YY</p>
-                            <p class="card-text" style="height: 100px">
-                                <img class="weather-icon" id="weatherIconDay2" src="">
-                            </img>
-                            </p>
-                            <p class="card-text">Temp:
+                </div>
+                    <div class="col-sm-2 card-body bg-primary text-white rounded mb-3">
+                        <p class="card-title font-weight-bold" id="Date2">MM/DD/YY</p>
+                        <p class="card-text" style="height: 100px">
+                            <img class="weather-icon" id="weatherIconDay2" src="">
+                        </img>
+                        </p>
+                        <p class="card-text">Temp:
                                 <span id="tempDay2"></span>
                             </p>
                             <p class="card-text">Humidity:
@@ -92,9 +91,8 @@
                                 <span id="windDay2"></span>
                             </p>
                         </div>
-                        <div class="row justify-content-between">
                             <div class="col-sm-2 card-body bg-primary text-white rounded mb-3">
-                                <p class="card-title font-weight-bold" id="Date3">MM?DD?YY</p>
+                                <p class="card-title font-weight-bold" id="Date3">MM/DD/YY</p>
                                 <p class="card-text" style="height: 100px">
                                     <img class="weather-icon" id="weatherIconDay3" src="">
                                 </img>
@@ -109,9 +107,8 @@
                                     <span id="windDay3"></span>
                                 </p>
                             </div>
-                            <div class="row justify-content-between">
                                 <div class="col-sm-2 card-body bg-primary text-white rounded mb-3">
-                                    <p class="card-title font-weight-bold" id="Date4">MM?DD?YY</p>
+                                    <p class="card-title font-weight-bold" id="Date4">MM/DD/YY</p>
                                     <p class="card-text" style="height: 100px">
                                         <img class="weather-icon" id="weatherIconDay4" src="">
                                     </img>
@@ -126,9 +123,8 @@
                                         <span id="windDay4"></span>
                                     </p>
                                 </div>
-                                <div class="row justify-content-between">
                                     <div class="col-sm-2 card-body bg-primary text-white rounded mb-3">
-                                        <p class="card-title font-weight-bold" id="Date5">MM?DD?YY</p>
+                                        <p class="card-title font-weight-bold" id="Date5">MM/DD/YY</p>
                                         <p class="card-text" style="height: 100px">
                                             <img class="weather-icon" id="weatherIconDay5" src="">
                                         </img>
@@ -143,7 +139,7 @@
                                             <span id="windDay5"></span>
                                         </p>
                                     </div>
-                </div>
+                    </div>
                 </div>
             </section>
         </div>
